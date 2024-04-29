@@ -13,8 +13,28 @@
 </head>
 <body onresize="getWidth_Height_Window()">
 
-        <script>
+    <div class="painel">
+        <div class="lifes">
+
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l1">
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l2">
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l3">
+            
+        </div>
+
+        <div class="time">
+            Time: <span id="timer"></span>
+        </div>
+    </div>
+
+    <script>
+
+        /* Gerando inimigos a cada 1 segundo */
+        var createEnemie = setInterval(function()
+        {
             gerarPosicaoAleatoria()
-        </script>
+        }, 1000)
+
+    </script>
 </body>
 </html>

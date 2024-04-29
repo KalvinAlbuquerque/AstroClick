@@ -1,4 +1,65 @@
+body
+{
+    background-image: url("imgs/galaxy_pixel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .enemies
 {
-    width: 75px;
+    width: 100px;
+}
+
+.painel
+{
+    position: absolute;
+    width: 100px;
+    padding: 10px;
+    bottom: 0px;
+    background-color:  #524bb4;
+    opacity: 0.5; 
+    left: 0;
+}
+
+.lifes
+{   
+    display: flex;
+    padding: 5px;
+    overflow: auto;   
+}
+
+.time
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btn-pixelart 
+{
+    font-family: "OCR A Std, monospace"; 
+    background-color: #333; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px;
+    cursor: pointer; 
+    outline: none; 
+    border-radius: 0;
+    box-shadow: none; 
+}
+
+.btn-pixelart:hover 
+{
+    background-color: #555; 
+}
+
+#game_over_image
+{
+    background-image: url("imgs/gameover.gif");
+    background-repeat: no-repeat;
+    padding: 28rem;
+    background-position: center;
+    background-size: contain;
+    background-color: black;
+
 }

@@ -3,17 +3,51 @@
 */
 var windowHeight = 0
 var windowWidth = 0
+var lifeless = 1
+var time = 11
+
+
 function getWidth_Height_Window()
 {
     windowHeight = window.innerHeight 
     windowWidth = window.innerWidth
 }
 
+var timer = setInterval(function()
+{
+    time-=1
+
+    if(time < 0)
+    {   
+        clearInterval(timer)
+        clearInterval(createEnemie)
+        alert("Venceu")
+    }
+
+    document.getElementById('timer').innerHTML = time
+},1000)
+
 
 function gerarPosicaoAleatoria()
 {
-
     getWidth_Height_Window()
+    /* Removendo inimigo caso já exista na página */
+    if(document.getElementById('enemie'))
+    {
+        document.getElementById('enemie').remove()
+
+        if(lifeless > 3)
+        {
+            window.location.href = "game_over.html"
+        }
+        else
+        {
+            document.getElementById('l' + lifeless).src = "imgs/lifeless.png"
+            lifeless++
+
+        }
+        
+    }
 
     //Gerando coordenadas aleatórias com base no tamanho da janela atual.
     //O Math.random() gera números aleatórios de 0 a 1
@@ -52,6 +86,11 @@ function gerarPosicaoAleatoria()
     enemie.style.left = posX + 'px'
     enemie.style.top = posY + 'px'
     enemie.style.position = 'absolute'
+    enemie.id = 'enemie'
+    enemie.onclick = function()
+    {
+        this.remove()
+    }
 
     /* Adicionando o elemento no body */
     document.body.appendChild(enemie)
