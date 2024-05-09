@@ -25,7 +25,7 @@ var timer = setInterval(function()
     }
 
     document.getElementById('timer').innerHTML = time
-},2000)
+},1000)
 
 
 function gerarPosicaoAleatoria()
@@ -60,7 +60,6 @@ function gerarPosicaoAleatoria()
     /* Gerando diferentes inimigos aleatoriamente */
     var enemie = document.createElement('img')
     var numberEnemie = Math.floor(Math.random() * 3)
-    console.log(numberEnemie)
     switch (numberEnemie)
     {
         case 0:
@@ -95,5 +94,54 @@ function gerarPosicaoAleatoria()
 
 }
 
+function getSelectedDifficulty()
+{
+    var difficultyForm = document.getElementsByName("difficulty")
+    var selectedDifficulty
+    
+    for (var i = 0; i < difficultyForm.length; i++) {
+        if (difficultyForm[i].checked) {
+            selectedDifficulty = difficultyForm[i].value
+            break
+        }
+    }
+    
+    return selectedDifficulty
+}
+
+function startGame()
+{   
+    var difficulty = getSelectedDifficulty(); 
+
+    localStorage.setItem("difficulty", difficulty)
+
+    window.location.href = 'game.html';
+    
+}
+
+
+
+function createEnemie()
+{ 
+    var difficulty =  localStorage.getItem("difficulty")
+    var timeDifficulty = 0
+
+    switch(difficulty)
+    {
+        case 'easy':
+            timeDifficulty = 1500
+            break
+        case 'medium':
+            timeDifficulty = 1000
+            break
+        case 'hard':
+            timeDifficulty = 800
+            break
+    }
+    setInterval(function()
+    {
+        gerarPosicaoAleatoria()
+    }, timeDifficulty)
+}
 
 

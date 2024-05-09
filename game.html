@@ -6,6 +6,9 @@
 
     <script src="game.js"></script>
 
+    <script src="https://code.createjs.com/easeljs-1.21.1.min.js"></script>
+    <script src="https://code.createjs.com/tweenjs-1.21.1.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     
     <title>AstroClick</title>
@@ -29,11 +32,7 @@
 
     <script>
 
-        /* Gerando inimigos a cada 1 segundo */
-        var createEnemie = setInterval(function()
-        {
-            gerarPosicaoAleatoria()
-        }, 1000)
+        createEnemie()
 
     </script>
 </body>

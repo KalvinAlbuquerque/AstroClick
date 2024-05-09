@@ -137,6 +137,16 @@ body
     font-weight: bold;
 }
 
-
+#difficulty-checkbox
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: #b3831c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
 
 
