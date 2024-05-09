@@ -1,13 +1,13 @@
 body
 {
-    background-image: url("imgs/galaxy_pixel.jpg");
+    background-image: url("imgs/pgulpqku4br81.gif");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .enemies
 {
-    width: 100px;
+    width: 150px;
 }
 
 .painel
@@ -16,7 +16,6 @@ body
     width: 100px;
     padding: 10px;
     bottom: 0px;
-    background-color:  #524bb4;
     opacity: 0.5; 
     left: 0;
 }
@@ -30,15 +29,22 @@ body
 
 .time
 {
-    font-size: 20px;
+    display: flex;
+    font-size: 30px;
+    color: #fff;
     font-weight: bold;
+}
+
+.time span 
+{
+    margin-right: 5px; 
 }
 
 
 .btn-pixelart 
 {
-    font-family: "OCR A Std, monospace"; 
-    background-color: #333; 
+    font-family: "OCR A Std, monospace";
+    background-color: #4833a8; 
     color: #fff; 
     border: none; 
     padding: 10px 20px;
@@ -46,16 +52,17 @@ body
     outline: none; 
     border-radius: 0;
     box-shadow: none; 
+    font-size: bold;
 }
 
 .btn-pixelart:hover 
 {
-    background-color: #555; 
+    background-color: #4527a0; 
 }
 
-#game_over_image
+#game_over_page
 {
-    background-image: url("imgs/gameover.gif");
+    background-image: url("imgs/lost.gif");
     background-repeat: no-repeat;
     padding: 28rem;
     background-position: center;
@@ -63,3 +70,73 @@ body
     background-color: black;
 
 }
+
+#win_page
+{
+    background-image: url("imgs/you_win.gif");
+    background-repeat: no-repeat;
+    padding: 28rem;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    overflow: hidden;
+    background-position: center center;
+
+}
+
+#index_page
+{
+    background-image: url("imgs/index_image.png");
+    background-repeat: no-repeat;
+    padding: 28rem;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgb(243, 173, 81); /* Define a sombra inicial */
+    }
+    50% {
+        text-shadow: 0 0 20px #e67f0b; /* Define a sombra intermediária */
+    }
+    100% {
+        text-shadow: 0 0 10px #6b3b04; /* Define a sombra final */
+    }
+}
+
+.title-index 
+{
+    font-size: 4rem; 
+    color: #f0d4bd; 
+    text-align: center; 
+    animation: glow 1.5s infinite;
+    font-family: "Luminari, fantasy";
+    font-weight: bold;
+}
+
+.title-win 
+{
+    font-size: 6rem; 
+    color: #ece90a; 
+    text-align: center; 
+    animation: glow 1.5s infinite;
+    font-family: "Luminari, fantasy";
+    font-weight: bold;
+}
+
+.title-game-over
+{
+    font-size: 6rem; 
+    color: #ec2c0a; 
+    text-align: center; 
+    animation: glow 1.5s infinite;
+    font-family: "Luminari, fantasy";
+    font-weight: bold;
+}
+
+
+
+

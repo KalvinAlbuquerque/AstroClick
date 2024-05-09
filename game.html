@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="game.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>AstroClick</title>
+
+</head>
+<body onresize="getWidth_Height_Window()">
+
+    <div class="painel">
+        <div class="lifes">
+
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l1">
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l2">
+            <img src="imgs/life.png" alt="" style="width: 5.5em;" id="l3">
+            
+        </div>
+
+        <div class="time">
+            <span>Time:</span> <span id="timer"></span>
+        </div>
+    </div>
+
+    <script>
+
+        /* Gerando inimigos a cada 1 segundo */
+        var createEnemie = setInterval(function()
+        {
+            gerarPosicaoAleatoria()
+        }, 1000)
+
+    </script>
+</body>
+</html>

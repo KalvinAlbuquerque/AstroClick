@@ -21,11 +21,11 @@ var timer = setInterval(function()
     {   
         clearInterval(timer)
         clearInterval(createEnemie)
-        alert("Venceu")
+        window.location.href = 'win.html'
     }
 
     document.getElementById('timer').innerHTML = time
-},1000)
+},2000)
 
 
 function gerarPosicaoAleatoria()
@@ -51,13 +51,11 @@ function gerarPosicaoAleatoria()
 
     //Gerando coordenadas aleatórias com base no tamanho da janela atual.
     //O Math.random() gera números aleatórios de 0 a 1
-    var posY = Math.floor(Math.random() * windowHeight  ) - 90
-    var posX = Math.floor(Math.random() * windowWidth) - 90
+    var posY = Math.floor(Math.random() * windowHeight  ) - 130
+    var posX = Math.floor(Math.random() * windowWidth) - 130
 
     posX = posX < 0 ? 0 : posX
     posY = posY < 0 ? 0 : posY
-    console.log(windowWidth, windowHeight)
-    console.log(posX, posY)
 
     /* Gerando diferentes inimigos aleatoriamente */
     var enemie = document.createElement('img')
@@ -96,7 +94,6 @@ function gerarPosicaoAleatoria()
     document.body.appendChild(enemie)
 
 }
-
 
 
 
